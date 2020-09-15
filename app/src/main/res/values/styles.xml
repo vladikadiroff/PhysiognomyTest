@@ -1,0 +1,252 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    // Стили TextView
+
+    <style name="Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/colorIcon</item>
+        <item name="android:textAppearance">@style/Text</item>
+    </style>
+
+    <style name="Text.ActionBarTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAppearance">@style/Text.ActionBarTitle</item>
+    </style>
+
+    <style name="Text.ActionBarSubTitle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAppearance">@style/Text.ActionBarSubTitle</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAppearance">@style/Text.Title</item>
+    </style>
+
+    <style name="Text.Title.Black">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textAppearance">@style/Text.Title.Black</item>
+    </style>
+
+    <style name="Text.Title.Exception">
+        <item name="android:text">@string/exception_title</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAppearance">@style/Text.Title.Exception</item>
+    </style>
+
+    <style name="Text.Header">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAppearance">@style/Text.Header</item>
+    </style>
+
+    <style name="Text.Header2">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAppearance">@style/Text.Header2</item>
+    </style>
+
+    <style name="Text.Header.CardStore">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAppearance">@style/Text.Header.CardStore</item>
+    </style>
+
+
+    <style name="Text.Normal">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textAppearance">@style/Text.Normal</item>
+    </style>
+
+    <style name="Text.Normal.Exception">
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/connect_exception</item>
+        <item name="android:textAppearance">@style/Text.Normal.Exception</item>
+    </style>
+
+    <style name="Text.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorCaptionText</item>
+        <item name="android:textAppearance">@style/Text.Caption</item>
+    </style>
+
+    <style name="Text.Caption.Link">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+
+        <item name="android:textAppearance">@style/Text.Caption.Link</item>
+    </style>
+
+
+
+
+    // Стили ImageView
+
+    <style name="ImageViewSmall">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="ImageViewSocialNetwork">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="ImageViewMedium">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+    </style>
+
+    <style name="ImageViewExeption">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:src">@drawable/network_exception</item>
+    </style>
+
+
+    // Стили CardView
+    <style name="Card" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Card.Information">
+        <item name="android:layout_width">match_parent</item>
+        <item name="cardCornerRadius">24dp</item>
+        <item name="cardElevation">10dp</item>
+    </style>
+
+    <style name="Card.Question">
+        <item name="android:layout_width">@dimen/card_question_width</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Card.Test">
+        <item name="android:layout_width">@dimen/card_test_type_width</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Card.Store">
+        <item name="android:layout_width">@dimen/card_store_width</item>
+        <item name="android:layout_height">@dimen/card_store_height</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+
+
+    // Стили Layout
+    <style name="Layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="Layout.SubActionBar">
+        <item name="android:layout_height">80dp</item>
+        <item name="android:background">@drawable/subactionbar_background</item>
+    </style>
+
+    <style name="Layout.Header">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/header_bg</item>
+    </style>
+
+    <style name="Layout.Exception">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    //ProgressView
+    <style name="ProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:layout_width">@dimen/progress_bar_size</item>
+        <item name="android:layout_height">@dimen/progress_bar_size</item>
+        <item name="android:indeterminateTint">@color/colorIcon</item>
+    </style>
+
+    //Divider
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorDivider</item>
+    </style>
+
+    //PlaceHolder
+    <style name="PlaceHolder">
+        <item name="android:background">@drawable/placeholder_bg</item>
+        <item name="android:layout_margin">@dimen/placeholder_margin</item>
+    </style>
+
+    <style name="PlaceHolder.Header">
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:layout_marginEnd">14dp</item>
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">10dp</item>
+    </style>
+
+    <style name="PlaceHolder.Text">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">5dp</item>
+    </style>
+
+    //Button
+    <style name="Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Button.Accent">
+        <item name="android:backgroundTint">@color/colorAccent</item>
+    </style>
+
+
+    // Recycler
+    <style name="RecyclerView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+
+
+</resources>

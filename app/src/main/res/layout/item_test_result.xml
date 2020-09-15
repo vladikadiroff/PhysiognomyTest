@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tool="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+            style="@style/Text.Header2"
+            android:id="@+id/textResultHeader"
+            tool:text="Характер"/>
+
+    <TextView
+            android:id="@+id/textResult"
+            android:visibility="visible"
+            style="@style/Text.Normal"
+            android:layout_marginTop="@dimen/card_result_margin"
+            android:layout_marginBottom="@dimen/card_result_padding"
+            tool:text="Характер есть совокупность устойчивых индивидуальных особенностей личности, складывающихся и проявляющихся в деятельности и общении, обусловливающих типичные для нее способы поведения. Те особенности личности, которые относятся к характеру, называют чертами характера."/>
+
+
+</LinearLayout>

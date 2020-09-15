@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_result_margin"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <View style="@style/PlaceHolder.Header"/>
+
+            <View style="@style/PlaceHolder.Text"/>
+
+            <View style="@style/PlaceHolder.Text"/>
+
+            <View style="@style/PlaceHolder.Text"/>
+
+</LinearLayout>

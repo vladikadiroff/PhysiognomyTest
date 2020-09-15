@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Физиогномика</string>
+
+    <string name="connect_exception">Ошибка загрузки данных.\nПопробуйте снова.</string>
+    <string name="error_unknown">Неизвестная ошибка</string>
+    <string name="run_test">Начать</string>
+    <string name="test_title">Тесты</string>
+    <string name="base_test_title">Базовый тест</string>
+    <string name="base_test_description">Среднестатический тест для определения вашего характера.</string>
+    <string name="question_count">Вопрос</string>
+    <string name="result_subtitle">Результат</string>
+    <string name="result_header">Заключение на основе теста</string>
+    <string name="result_information_tool">В общем понимании предметом физиогномики является психодиагностика личности по внешнему облику, прежде всего по лицу[9]. Однако были периоды, когда психодиагностике подвергались разные части тела. В широком понимании, предметом физиогномики было как лицо, так и тело, характерные гримасы, жесты и позы, телосложение и осанка. В древности физиогномика применялась также к животным. Впервые это было описано неизвестным автором в труде Φυσιογνωμονικά (англ.)русск. (часто это сочинение приписывают Аристотелю), где были перечислены главнейшие признаки: «Скажу теперь, каких родов берутся знаки. Они берутся всех родов: распознают характер и по движениям, и по фигуре, и по цвету, и по выражению лица, и по волосатости, и по гладкости [по отсутствию волос], и по голосу, и по мясистости, и по членам, и по всему типу [виду] тела» (а 26-33)[17]. Позже из понятия «физиогномики» выделились кинесика, френология, окулесика и т. д., и термин физиогномика стал использоваться в узком понимании.</string>
+    <string name="link_vk"><a href="https://vk.com/facereading/">Подписаться на наш ВК</a></string>
+    <string name="test_subtitle">Тесты</string>
+    <string name="shop_subtitle">Покупки</string>
+    <string name="about_subtitle">О нас</string>
+    <string name="about_header">Физиогномика для всех</string>
+    <string name="store">Покупки</string>
+    <string name="button_retry">Повторить</string>
+    <string name="button_checkout">Перейти к заказу</string>
+    <string name="exception_title">Оооооой!</string>
+</resources>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tool="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            style="@style/Layout.SubActionBar">
+
+        <TextView
+                style="@style/Text.ActionBarSubTitle"
+                android:id="@+id/txtSubActionBarResult"
+                android:layout_centerInParent="true"
+                android:text="@string/result_subtitle" />
+
+        <ProgressBar
+                style="@style/ProgressBar"
+                android:id="@+id/progressLoadingResult"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/txtSubActionBarResult"
+                android:layout_marginRight="@dimen/progress_bar_margin"
+                android:visibility="visible"/>
+
+
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/layoutResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+                style="@style/Card.Information"
+                android:layout_margin="@dimen/margin_32dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        style="@style/Layout.Header"
+                        android:gravity="center_vertical">
+
+                    <TextView
+                            style="@style/Text.Header"
+                            android:layout_marginStart="@dimen/text_result_header_margin_start"
+                            android:layout_weight="1"
+                            android:text="@string/result_header" />
+
+                    <ImageView
+                            style="@style/ImageViewSmall"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/splash_logo"/>
+
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                        style="@style/RecyclerView"
+                        android:id="@+id/recyclerResult"
+                        tool:itemCount="3"
+                        android:padding="@dimen/card_result_padding"
+                        tool:listitem="@layout/item_test_result"/>
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+                android:text="Начать заново"
+                android:layout_margin="@dimen/card_result_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/buttonStartTestAgain"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/layout_social_network_margin"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <ImageView
+                    style="@style/ImageViewSmall"
+                    android:src="@drawable/social_vk_2" />
+
+            <TextView
+                    style="@style/Text.Caption.Link"
+                    android:linksClickable="true"
+                    android:layout_margin="@dimen/text_social_network_margin"
+                    android:text="@string/link_vk" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/layoutLoadingResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_result_margin"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <include layout="@layout/placeholder_result"/>
+            <include layout="@layout/placeholder_result"/>
+            <include layout="@layout/placeholder_result"/>
+            <include layout="@layout/placeholder_result"/>
+            <include layout="@layout/placeholder_result"/>
+            <include layout="@layout/placeholder_result"/>
+
+        </LinearLayout>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <LinearLayout
+            style="@style/Layout.Exception"
+            android:id="@+id/layoutResultException"
+            android:visibility="visible">
+
+        <ImageView
+                style="@style/ImageViewExeption"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+        <TextView
+                style="@style/Text.Title.Exception"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+        <TextView
+                style="@style/Text.Normal.Exception"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+        <Button
+                style="@style/Button.Accent"
+                android:id="@+id/buttonResultRetry"
+                android:text="@string/button_retry"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

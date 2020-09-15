@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayoutStoreDetail"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarStoreDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@animator/appbar_always_elevated"
+            android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarLayoutStoreDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:collapsedTitleTextAppearance="@style/Text.ActionBarTitle"
+                app:expandedTitleTextAppearance="@style/Text.ActionBarSubTitle"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:contentScrim="@color/colorPrimary">
+
+            <ImageView
+                    android:id="@+id/imageStoreDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_shop_picture_height"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/splash_logo"/>
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbarStoreDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    tools:title = "@string/app_name"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollStoreDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/containerDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_32dp"
+                    android:orientation="vertical">
+
+
+
+                <TextView
+                        style="@style/Text.Title"
+                        android:id="@+id/textStoreDetailTitle"
+                        android:textColor="@color/colorPrimaryText"
+                        tools:text="Полная перезагрузка вашей личности 2.0"/>
+
+                <TextView
+                        style="@style/Text.Header2"
+                        android:id="@+id/textStoreDetailPrice"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="24dp"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        tools:text="3000₽"
+                        />
+
+                <TextView
+                        style="@style/Text.Normal"
+                        android:id="@+id/textStoreDetailInfo"
+                        android:layout_marginBottom="24dp"
+                        tools:text = "1. Поиск минусов и слабых сторон характера о которых вы знаете или не знаете;
+2. Анализ причины наличия каждого минуса характера, слабой стороны;
+3. Рекомендации по улучшению вашего физического и психоэмоционального состояния здоровья;
+
+4. Все интересующие вас вопросы;
+
+5. План улучшения вашего характера на 6 месяцев:
+• изменение отношения к особенностям своего характера;
+• изменение отношения к стилю жизни (привычки);
+• изменение отношения к обществу;
+• изменение отношения к семье;
+
+6. Список изменения черт лица, следующих за изменением вашего характера;
+
+7. Повторная консультация через 6 месяцев."/>
+
+                <Button
+                        style="@style/Button.Accent"
+                        android:id="@+id/buttonStoreDetailCheckout"
+                        android:layout_gravity="center"
+                        android:text="@string/button_checkout"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.core.widget.NestedScrollView>
+    
+    
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+

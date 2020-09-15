@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            style="@style/Layout.SubActionBar">
+
+        <TextView
+                style="@style/Text.ActionBarSubTitle"
+                android:id="@+id/textSubActionBarStore"
+                android:layout_centerInParent="true"
+                android:text="@string/store" />
+
+        <ProgressBar
+                style="@style/ProgressBar"
+                android:id="@+id/progressLoadingStore"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textSubActionBarStore"
+                android:layout_marginRight="@dimen/progress_bar_margin"
+                android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            style="@style/RecyclerView"
+            android:id="@+id/recyclerStore"
+            android:layoutAnimation="@anim/fall_down_layout_animation"
+            android:padding="@dimen/margin_32dp"
+            android:visibility="visible"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_store"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerStore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_32dp"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/card_store_item_margin">
+
+                <include layout="@layout/placeholder_store"/>
+                <include layout="@layout/placeholder_store"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/card_store_item_margin">
+
+                <include layout="@layout/placeholder_store"/>
+                <include layout="@layout/placeholder_store"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+            style="@style/Layout.Exception"
+            android:id="@+id/layoutStoreException"
+            android:visibility="gone">
+
+        <ImageView
+                style="@style/ImageViewExeption"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+        <TextView
+                style="@style/Text.Title.Exception"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+        <TextView
+                style="@style/Text.Normal.Exception"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+        <Button
+                style="@style/Button.Accent"
+                android:id="@+id/buttonStoreRetry"
+                android:text="@string/button_retry"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

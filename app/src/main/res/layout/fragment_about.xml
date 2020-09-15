@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+            style="@style/Layout.SubActionBar">
+
+        <TextView
+                style="@style/Text.ActionBarSubTitle"
+                android:layout_gravity="center"
+                android:text="@string/about_subtitle" />
+
+    </FrameLayout>
+
+
+
+    <ScrollView
+            android:id="@+id/containerAbout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                    style="@style/Card.Information"
+                    android:layout_margin="@dimen/margin_32dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            style="@style/Layout.Header"
+                            android:gravity="center_vertical">
+
+                        <TextView
+                                style="@style/Text.Header"
+                                android:layout_marginStart="@dimen/text_result_header_margin_start"
+                                android:layout_weight="1"
+                                android:text="@string/about_header" />
+
+
+
+                    </LinearLayout>
+
+
+
+                    <TextView
+                            style="@style/Text.Normal"
+                            android:layout_marginStart="@dimen/card_result_padding"
+                            android:layout_marginTop="@dimen/card_result_margin"
+                            android:layout_marginEnd="@dimen/card_result_padding"
+                            android:layout_marginBottom="@dimen/card_result_padding"
+                            android:gravity="center"
+                            android:text="@string/result_information_tool" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/layout_social_network_margin"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        style="@style/ImageViewSmall"
+                        android:src="@drawable/social_vk_2" />
+
+                <TextView
+                        style="@style/Text.Caption.Link"
+                        android:layout_margin="@dimen/text_social_network_margin"
+                        android:text="@string/link_vk" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_question_width">
+
+        <FrameLayout
+                style="@style/Layout.SubActionBar"/>
+
+        <com.google.android.material.card.MaterialCardView
+                style="@style/Card.Question"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="2dp">
+
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                <TextView
+                        style="@style/Text.Title"
+                        android:id="@+id/textTestTitle"
+                        android:layout_marginTop="@dimen/card_question_title_margin_top"
+                        android:textColor="@color/colorPrimaryText"
+                        tools:text="Линия Волос" />
+
+                <TextView
+                        style="@style/Text.Normal"
+                        android:id="@+id/textTestDescription"
+                        android:layout_margin="@dimen/card_question_text_margin"
+                        android:gravity="center"
+                        tools:text="Выберите линию волос на картинках, которая больше всего вам подходит" />
+
+                <TextView
+                        style="@style/Text.Caption"
+                        android:id="@+id/textTestCounter"
+                        android:layout_margin="@dimen/card_question_text_margin"
+                        tools:text="@string/question_count" />
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </FrameLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            style="@style/RecyclerView"
+            android:id="@+id/recyclerTestItems"
+            android:layoutAnimation="@anim/fall_down_layout_animation"
+            android:padding="@dimen/margin_32dp"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_test_variant" />
+
+
+</LinearLayout>

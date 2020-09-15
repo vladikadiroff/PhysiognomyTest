@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/shop"
+            app:startDestination="@id/shopFragment">
+
+    <fragment android:id="@+id/shopFragment"
+              android:name="ru.vladikadiroff.physiognomy.ui.fragments.store.StoreFragment"
+              android:label="@string/app_name"
+
+    >
+        <action
+                android:id="@+id/action_shopFragment_to_shopItemFragment"
+                app:destination="@id/shopItemFragment"
+                app:enterAnim="@anim/slide_in_right_animation"
+                app:exitAnim="@anim/slide_out_left_animation"
+                app:popEnterAnim="@anim/slide_in_left_animation"
+                app:popExitAnim="@anim/slide_out_right_animation"/>
+    </fragment>
+    <fragment
+            android:id="@+id/shopItemFragment"
+            android:name="ru.vladikadiroff.physiognomy.ui.fragments.store.StoreDetailFragment"/>
+</navigation>

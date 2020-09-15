@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout_test_start"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            style="@style/Layout.SubActionBar">
+
+        <TextView
+                style="@style/Text.ActionBarSubTitle"
+                android:id="@+id/txtSubActionBarTests"
+                android:layout_centerInParent="true"
+                android:text="@string/test_subtitle" />
+
+        <ProgressBar
+                style="@style/ProgressBar"
+                android:id="@+id/progressLoadingTests"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/txtSubActionBarTests"
+                android:layout_marginRight="@dimen/progress_bar_margin"
+                android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerTests"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutAnimation="@anim/fall_down_layout_animation"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:visibility="gone"
+            android:paddingEnd="@dimen/view_pager2_padding_80dp"
+            android:paddingStart="@dimen/view_pager2_padding_80dp"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/layoutLoadingTests"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/card_result_margin"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <include layout="@layout/placeholder_test"/>
+
+        </LinearLayout>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <LinearLayout
+            style="@style/Layout.Exception"
+            android:id="@+id/layoutExceptionTests"
+            android:visibility="gone">
+
+        <ImageView
+                style="@style/ImageViewExeption"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+        <TextView
+                style="@style/Text.Title.Exception"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+        <TextView
+                style="@style/Text.Normal.Exception"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+        <Button
+                style="@style/Button.Accent"
+                android:id="@+id/buttonStartRetry"
+                android:text="@string/button_retry"
+                android:layout_margin="@dimen/layout_error_margin"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
